@@ -1,4 +1,4 @@
-const greeting = require("./index");
+const greeting = require("./greeting");
 
 describe("Greeting", () => {
   it("should return a greeting with the name", () => {
