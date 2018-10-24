@@ -1,29 +1,30 @@
 {
-  "name": "latetermassignment",
+  "name": "week10-solution",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node server",
+    "test": "jest",
+    "watch": "jest --watchAll",
+    "build": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "jest": "^23.6.0"
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4",
+    "supertest": "^3.3.0",
     "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
-  },
-  "scripts": {
-    "test": "jest",
-    "watch": "jest --watchAll",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/badServers/LateTermAssignment.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/badServers/LateTermAssignment/issues"
-  },
-  "homepage": "https://github.com/badServers/LateTermAssignment#readme"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
 }
