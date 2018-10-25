@@ -19,9 +19,9 @@ Tic Tac Toe is a web game, just like the original the rules are that each player
 
 ## Authors
 
-* **Aðalberg Snorri Gestsson** - [PurpleBooth](https://github.com/aSnorri)
-* **Andri Sæmundssonn** - [PurpleBooth](https://github.com/Gaurinn)
-* **Arnar Freyr Kristinsson** - [PurpleBooth](https://github.com/afk0901)
-* **Einar Sveinbjörnssonn** - [PurpleBooth](https://github.com/wallband)
-* **Elmar Þór Aðalsteinsson** - [PurpleBooth](https://github.com/elmara16)
-* **Hilmar Ómarsson** - [PurpleBooth](https://github.com/Hilmar96)
+* **Aðalberg Snorri Gestsson** - [aSnorri](https://github.com/aSnorri)
+* **Andri Sæmundssonn** - [Gaurinn](https://github.com/Gaurinn)
+* **Arnar Freyr Kristinsson** - [afk0901](https://github.com/afk0901)
+* **Einar Sveinbjörnssonn** - [wallband](https://github.com/wallband)
+* **Elmar Þór Aðalsteinsson** -[elmara16](https://github.com/elmara16)
+* **Hilmar Ómarsson** - [Hilmar96](https://github.com/Hilmar96)
