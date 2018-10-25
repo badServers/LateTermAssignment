@@ -4,7 +4,8 @@ const app = express();
 const api = require("./src/server/api");
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "../", "dist")));
+app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname)));
 
 // Use the API router
 app.use("/api", api);
