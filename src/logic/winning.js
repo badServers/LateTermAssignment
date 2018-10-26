@@ -1,33 +1,33 @@
 function isWinner(board, player, gameOver) {
-  if(board[0].innerText === player && board[1].innerText === player && board[2].innerText === player) {
+  if(board[0] === player && board[1] === player && board[2] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[3].innerText === player && board[4].innerText === player && board[5].innerText === player) {
+  else if(board[3] === player && board[4] === player && board[5] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[6].innerText === player && board[7].innerText === player && board[8].innerText === player) {
+  else if(board[6] === player && board[7] === player && board[8] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[0].innerText === player && board[3].innerText === player && board[6].innerText === player) {
+  else if(board[0] === player && board[3] === player && board[6] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[1].innerText === player && board[4].innerText === player && board[7].innerText === player) {
+  else if(board[1] === player && board[4] === player && board[7] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[2].innerText === player && board[5].innerText === player && board[8].innerText === player) {
+  else if(board[2] === player && board[5] === player && board[8] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[0].innerText === player && board[4].innerText === player && board[8].innerText === player) {
+  else if(board[0] === player && board[4] === player && board[8] === player) {
     gameOver = true;
     return player;
   }
-  else if(board[2].innerText === player && board[4].innerText === player && board[6].innerText === player) {
+  else if(board[2] === player && board[4] === player && board[6] === player) {
     gameOver = true;
     return player;
   }

@@ -1,3 +1,4 @@
+const checkForWinner = require("./winning")
 var playerTurn = "X";
 var gameOver = false;
 var board = {
@@ -25,6 +26,14 @@ function updateBoard(tile) {
         return { "result": "Tile taken" };
 
     board[tile] = playerTurn;
+    checkForWinner.isWinner(board, playerTurn, gameOver);
+    if(playerTurn === "X") {
+      playerTurn = "O";
+    }
+    else if (playerTurn === "O") {
+      playerTurn = "X";
+    }
+
     return { "result": "Board updated" };
 }
 
