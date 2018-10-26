@@ -45,4 +45,8 @@ describe("Is X a winner vertically?", () => {
    it("Should return an X (testing first row vertically)", () => {
         expect(winning.isWinner(expected, "X", false)).toBe("X");
     });
-})
+    
+    it("Should return an empty string if O (testing first row vertically)",() =>{
+       expect(winning.isWinner(expected, "O", false)).toBe("");	   
+    }); 
+});
