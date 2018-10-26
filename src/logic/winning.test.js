@@ -128,8 +128,14 @@ var testing_first_row_vertically_O =
 	 "O", "X", "O",
 	 "O", "O", "X"
 	];
+var testing_second_row_vertically_O =
+	["X", "O", "X",
+	 "O", "O", "X",
+	 "X", "O", "O"
+	];
 
 O_winner_vertically(testing_first_row_vertically_O);
+O_winner_vertically(testing_second_row_vertically_O);
 //Vertical testing for O finished
 
 
