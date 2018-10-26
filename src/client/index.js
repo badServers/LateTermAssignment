@@ -1,14 +1,6 @@
 const functions = require("./functions");
 
-function loadBoard() {
-    board = functions.fetchBoard();
-    board.then(function(result) {
-        functions.renderBoard(result);
-    });
-}
-
 $(document).ready(function() {
-
     // DOM Objects
     var message = $('#message-banner');
     var board = $('#board-container div');
@@ -16,18 +8,22 @@ $(document).ready(function() {
     var xScoreText = $('#x-score');
     var oScoreText = $('#o-score');
 
-    // Variables
-    var player = "X";
-    var gameOver = false;
-    var draw = false;
-    var winner = "";
-    var xScore = 0;
-    var oScore = 0;
+    // Fetches board status from API and renders it
+    function loadBoard() {
+        boardStatus = functions.fetchBoard();
+        boardStatus.then(function(result) {
+            functions.renderBoard(board, result);
+        });
+    }
 
     loadBoard();
 
+    // Gameboard on click event
     board.on('click', function() {
-		var tile = $(this);
-		console.log(tile);
+        var response = functions.tileClick($(this)[0].id);
+        response.then(function(result) {
+            if (result.result == "Board updated")
+                loadBoard();
+        });
     });
 });

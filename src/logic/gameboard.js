@@ -1,3 +1,4 @@
+var playerTurn = "X";
 var gameOver = false;
 var board = {
     0: "-",
@@ -16,14 +17,14 @@ function boardStatus() {
     return board;
 }
 
-function updateBoard(tile, player) {
+function updateBoard(tile) {
     if (gameOver)
         return { "result": "Game is over" };
 
     if (board[tile] != "-")
         return { "result": "Tile taken" };
 
-    board[tile] = '"' + player + '"';
+    board[tile] = playerTurn;
     return { "result": "Board updated" };
 }
 

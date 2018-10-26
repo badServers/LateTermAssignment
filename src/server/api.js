@@ -22,4 +22,8 @@ router.get("/game/gameboard/status", (req, res) => {
     res.status(200).send(gameboard.boardStatus());
 });
 
+router.get("/game/gameboard/updateBoard/:tile", (req, res) => {
+    res.status(200).send(gameboard.updateBoard(req.params.tile));
+});
+
 module.exports = router;
