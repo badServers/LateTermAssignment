@@ -48,3 +48,11 @@ var testing_first_row_vertically_X =
 		"X", "O", "X"
 	       ];
 X_winner_vertically(testing_first_row_vertically_X);
+
+var testing_second_row_vertically_X = 
+	       ["O", "X", "O",
+	        "X", "X", "O",
+		"O", "X", "X"
+	       ]; 
+
+X_winner_vertically(testing_second_row_vertically_X);
