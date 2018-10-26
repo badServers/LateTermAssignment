@@ -106,9 +106,14 @@ var testing_second_row_horizontally_O =
 	      "O", "O", "O",
 	      "X", "X", "O"
 	     ];
+var testing_third_row_horizontally_O =
+	    ["X", "O", "X",
+	     "O", "X", "O",
+	     "O", "O", "O"];
 
 O_winner_horizontally(testing_first_row_horizontally_O);
 O_winner_horizontally(testing_second_row_horizontally_O);
+O_winner_horizontally(testing_third_row_horizontally_O);
 //Horizontal testing for O finished
 
 
