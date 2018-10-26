@@ -23,10 +23,22 @@ function X_winner_vertically(expected){
       it("Should return an empty string if inserted O", () =>
         {
 	  expect(winning.isWinner(expected, "O", false)).toBe("");
-	}
-      );
+	});
    });
 }
+//Winning diagonally for X
+function X_winner_diagonally(expected){
+   describe("Is X a winner diagonally?", () => {
+      it("Should return an X (testing X diagonally)", () =>
+        {
+	  expect(winning.isWinner(expected, "X", false)).toBe("X");
+	});
+      it("Should return an empty string for input O (testing X diagonally", ()=>        {
+	  expect(winning.isWinner(expected, "O", false)).toBe("");
+        });
+   });
+}
+
 //End of testing functions for X
 
 //Testing functions for O
