@@ -5,7 +5,7 @@ describe("Is X a winner horizontal?", () => {
                     "O","O","X",
                     "O","X","O"];
 
-  it("Should return an X if X(testing first row horizontal)", () => {
+  it("Should return an X (testing first row horizontal)", () => {
     expect(winning.isWinner(expected,"X",false)).toBe("X");
   });
 
@@ -16,7 +16,7 @@ describe("Is X a winner horizontal?", () => {
   expected = ["O","X","O",
 	      "X", "X", "X",
 	      "O", "O", "X"];
-  it("Should return an X if X (testing second row horizontal)", () => {
+  it("Should return an X (testing second row horizontal)", () => {
      expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
@@ -28,7 +28,7 @@ describe("Is X a winner horizontal?", () => {
               "X", "O", "O",
                "X", "X", "X"];
   
-  it("Should return an X if X (testing third row horizontal)", () => {
+  it("Should return an X (testing third row horizontal)", () => {
       expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
@@ -45,4 +45,5 @@ describe("Is X a winner vertically?", () => {
     it("Should return an X (testing first row vertically)", () => {
         expect(winning.isWinner(expected, "X", false)).toBe("X");
     });
+    
 });
