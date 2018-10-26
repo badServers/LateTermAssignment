@@ -157,12 +157,12 @@ O_winner_vertically(testing_third_row_vertically_O);
 //Vertical testing for O finished
 
 //Diagonally testing for X
-var testing_X_diagonally_from_top =
+var testing_X_diagonally_from_left_top =
 	["X", "X", "O",
 	 "X", "X", "O",
 	 "O", "O", "X"
 	];
-X_winner_diagonally(testing_X_diagonally_from_top);
+X_winner_diagonally(testing_X_diagonally_from_left_top);
 
 
 
