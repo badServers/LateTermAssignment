@@ -1,4 +1,5 @@
 const winning = require('./winning');
+//Testing functions for X
 //Horizontal winner testing function for X
 function X_winner_horizontal(expected){
    describe("Is X a winner horizontal?", () => {
@@ -6,9 +7,9 @@ function X_winner_horizontal(expected){
        {
          expect(winning.isWinner(expected, "X",false)).toBe("X");
        });
-     it("Should return an empty string if inserted O", () =>{
+     it("Should return an empty string if inserted O", () =>
        {
-         expect(winning.isWinner(expected, "O", false)).toBe("O");
+         expect(winning.isWinner(expected, "O", false)).toBe("");
        });
    });
 }
@@ -26,6 +27,20 @@ function X_winner_vertically(expected){
       );
    });
 }
+//End of testing functions for X
+
+//Testing functions for O
+//Horizontal winner testing function
+function O_winner_horizontally(expected){
+   describe("Is O a winner horizontally? ", () => {
+      it("Should return an O (testing O horizontally)", () =>
+        {
+	  expect(winning.isWinner(expected, "O", false)).toBe("O");
+	}
+      );
+   });
+}
+//End of testing functions for O
 
 //Horizontal testing for X
 var testing_first_row_horizontal_X = 
