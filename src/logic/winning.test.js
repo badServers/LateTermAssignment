@@ -183,7 +183,16 @@ var testing_X_diagonally_from_left_bottom =
 	];
 X_winner_diagonally(testing_X_diagonally_from_left_top);
 X_winner_diagonally(testing_X_diagonally_from_left_bottom);
+//Diagonally testing for X finished
 
+//Diagonally testing for O
+var testing_O_diagonally_from_left_top =
+	["O", "X", "O",
+	 "O", "O", "X",
+         "X", "X", "O"
+	];
+O_winner_diagonally(testing_O_diagonally_from_left_top);
+//Diagonally testing for O finished
 
 
 
