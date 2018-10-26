@@ -1,5 +1,12 @@
-const turnFunctions = require("../logic/playerturn");
-const winning = require("../logic/winning");
+const functions = require("./functions");
+
+function loadBoard() {
+    board = functions.fetchBoard();
+    board.then(function(result) {
+        functions.renderBoard(result);
+    });
+}
+
 $(document).ready(function() {
 
     // DOM Objects
@@ -17,16 +24,10 @@ $(document).ready(function() {
     var xScore = 0;
     var oScore = 0;
 
-	// Board click event
+    loadBoard();
+
     board.on('click', function() {
 		var tile = $(this);
-		turnFunctions.playerTurn(tile, gameOver, player);
-		winner = winning.isWinner(board, player, gameOver);
-		if(winner == "") {
-		    player = turnFunctions.changePlayer(player);
-		}
-		else {
-		    console.log("Winner is " + winner);
-		}
+		console.log(tile);
     });
 });
