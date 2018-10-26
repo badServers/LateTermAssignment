@@ -5,22 +5,24 @@ describe("Is X a winner horizontal?", () => {
                     "O","O","X",
                     "O","X","O"];
 
-  it("Should return an X (testing first row horizontal)", () => {
+  it("Should return an X (testing first row horizontal)", () => 
+  {
     expect(winning.isWinner(expected,"X",false)).toBe("X");
   });
 
-  it("Should return an empty string if O (testing for first row horizontal)", () => {
+  it("Should return an empty string if O (testing for first row horizontal)", ()  => {
      expect(winning.isWinner(expected, "O",false)).toBe("");
   });
 
   expected = ["O","X","O",
 	      "X", "X", "X",
 	      "O", "O", "X"];
-  it("Should return an X (testing second row horizontal)", () => {
+  it("Should return an X (testing second row horizontal)", () => 
+  {
      expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
-  it("Should return an empty string if O (testing second row horizontal", () => {
+  it("Should return an empty string if O (testing second row horizontal", () =>   {
       expect(winning.isWinner(expected, "O", false)).toBe("");
   });
   
@@ -28,11 +30,12 @@ describe("Is X a winner horizontal?", () => {
               "X", "O", "O",
                "X", "X", "X"];
   
-  it("Should return an X (testing third row horizontal)", () => {
+  it("Should return an X (testing third row horizontal)", () => 
+  {
       expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
-  it("Should return an empty string if O (testing third row horizontal)", () => {
+  it("Should return an empty string if O (testing third row horizontal)", () =>   {
       expect(winning.isWinner(expected, "O", false)).toBe("");
   });
   
@@ -42,11 +45,12 @@ describe("Is X a winner vertically?", () => {
     var expected = ["X","O","X",
                     "X", "X", "O",
                     "X", "X", "X"];
-   it("Should return an X (testing first row vertically)", () => {
+   it("Should return an X (testing first row vertically)", () => 
+    {
         expect(winning.isWinner(expected, "X", false)).toBe("X");
     });
     
-    it("Should return an empty string if O (testing first row vertically)",() =>{
+    it("Should return an empty string if O (testing first row vertically)",() =>    {
        expect(winning.isWinner(expected, "O", false)).toBe("");	   
     }); 
 });
