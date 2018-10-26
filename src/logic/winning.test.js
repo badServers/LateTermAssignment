@@ -1,5 +1,5 @@
 const winning = require('./winning');
-//Horizontal winner
+//Horizontal winner for X
 function X_winner_horizontal(expected){
    describe("Is X a winner horizontal?", () => {
      it("Should return an X (testing X horizontal)", () => 
@@ -8,7 +8,7 @@ function X_winner_horizontal(expected){
        });
    });
 }
-
+//Vertical winner for X
 function X_winner_vertically(expected){
    describe("Is X a winner horizontal?", () => {
       it("Should return an X (testing X vertically)", () =>
@@ -17,7 +17,7 @@ function X_winner_vertically(expected){
         });
    });
 }
-//Horizontal testing
+//Horizontal testing for X
 var testing_first_row_horizontal_X = 
 	       ["X", "X", "X",
 	         "O", "O", "X",
@@ -39,9 +39,9 @@ var testing_third_row_horizontal_X =
 	        "X", "X", "X"
 	       ];
 X_winner_horizontal(testing_third_row_horizontal_X);
-//Horizontal testing finished
+//Horizontal testing finished for X
 
-//Vertical testing
+//Vertical testing for X
 var testing_first_row_vertically_X = 
 	       ["X", "X", "O",
 		"X", "O", "O",
@@ -64,7 +64,7 @@ var testing_third_row_vertically_X =
 	      ];
 
 X_winner_vertically(testing_third_row_vertically_X);
-
+//Vertical tedting for X finished
 
 
 
