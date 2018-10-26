@@ -68,6 +68,20 @@ function O_winner_vertically(expected){
 	 });
     });
 }
+//Diagonally winner testing function
+function O_winner_diagonally(expected){
+    describe("Is O a winner diagonally?", () => {
+       it("Should return an O (testing O diagonally)", () =>
+	 {
+          expect(winning.isWinner(expected, "O", false)).toBe("O");
+	 });
+       it("Should return an empty string if input is X (testing X diagonally)" ,
+       () =>
+       {
+	 expect(winning.isWinner(expected, "X", false)).toBe("");
+       });
+    });
+};
 //End of testing functions for O
 
 //Horizontal testing for X
@@ -162,13 +176,13 @@ var testing_X_diagonally_from_left_top =
 	 "X", "X", "O",
 	 "O", "O", "X"
 	];
-var testing_X_diagonally_from_right_bottom =
+var testing_X_diagonally_from_left_bottom =
 	["X", "O", "X",
 	 "O", "X", "O",
 	 "X", "O", "O"
 	];
 X_winner_diagonally(testing_X_diagonally_from_left_top);
-X_winner_diagonally(testing_X_diagonally_from_right_bottom);
+X_winner_diagonally(testing_X_diagonally_from_left_bottom);
 
 
 
