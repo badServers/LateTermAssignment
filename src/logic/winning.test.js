@@ -191,7 +191,13 @@ var testing_O_diagonally_from_left_top =
 	 "O", "O", "X",
          "X", "X", "O"
 	];
+var testing_O_diagonally_from_left_bottom = 
+	["O", "X", "O",
+	 "X", "O", "X",
+	 "O", "X", "X"
+	];
 O_winner_diagonally(testing_O_diagonally_from_left_top);
+O_winner_diagonally(testing_O_diagonally_from_left_bottom);
 //Diagonally testing for O finished
 
 
