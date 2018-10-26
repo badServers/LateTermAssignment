@@ -1,5 +1,5 @@
 const turnFunctions = require("../logic/playerturn");
-
+const playAgainButton = require("../logic/playAgain");
 $(document).ready(function() {
 
     // DOM Objects
@@ -8,7 +8,6 @@ $(document).ready(function() {
     var resetButton = $('#reset-button');
     var xScoreText = $('#x-score');
     var oScoreText = $('#o-score');
-    
     // Variables
     var player = "X";
     var gameOver = false;
@@ -16,11 +15,17 @@ $(document).ready(function() {
     var winner = "";
     var xScore = 0;
     var oScore = 0;
-	
+    var counter = 0;
+
 	// Board click event
     board.on('click', function() {
 		var tile = $(this);
 		turnFunctions.playerTurn(tile, gameOver, player);
 		player = turnFunctions.changePlayer(player);
     });
+
+    resetButton.on('click', function () {
+      playAgainButton.playAgain(xScore, oScore, player, counter);
+    });
+
 });
