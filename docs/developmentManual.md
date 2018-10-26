@@ -1,5 +1,5 @@
 # Development Manual
--The following is required for a new programmer to join the team and start conrtibuting
+-The following is required for a new programmer to join the team and start contributing
 
 ## Prerequisites
 1. Sign up on [Github][github]

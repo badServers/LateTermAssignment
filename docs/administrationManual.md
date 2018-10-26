@@ -18,12 +18,16 @@
 - In shell/command line, type, `npm start` to start the Express server.
 
 ## Deployment on Heroku
-1. Install the [Heroku toolbelt / CLI][heroku]
-2. Login to Heroku from shell/command line, by typing `heroku login`
-3. Push code to app. In shell/command line, type `git push heroku master`
+Heroku offers a great [step-by-step][herokudeploy] introduction for deploying node applications on Heroku, if you get
+stuck somewhere, head over there to check that out.
 
+1. Sign up for free on Heroku.com.
+2. Setup the Heroku Toolbelt
+3. Sign in using the Heroku Toolbelt
+4. Follow [step-by-step guide][herokudeploy] on Heroku
 
 
 [github]: https://github.com/
 [nodejs]: https://nodejs.org/en/
 [heroku]: https://devcenter.heroku.com/articles/heroku-cli
+[herokudeploy]: https://devcenter.heroku.com/categories/nodejs-support
