@@ -19,7 +19,7 @@
  - To run the tests, in shell/command line type, `npm test`
 
 ## Running locally
-- In shell/command line, type, `npm start to start` the Express server.
+- In shell/command line, type, `npm start` to start the Express server.
 
 ## Deployment on Heroku
 1. Install the [Heroku toolbelt / CLI][heroku]
