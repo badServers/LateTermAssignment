@@ -1,7 +1,7 @@
 const winning = require('./winning');
 
 describe("Is X a Winner?", () => {
-  const expected = ["X","X","X",
+  var expected = ["X","X","X",
                     "O","O","X",
                     "O","X","O"];
 
@@ -20,5 +20,9 @@ describe("Is X a Winner?", () => {
      expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
-  it("Should return an O")
+  it("Should return an O (testing second row horizontal", () => {
+      expect(winning.isWinner(expected, "O", false)).toBe("");
+  });
 });
+
+
