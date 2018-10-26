@@ -37,11 +37,24 @@ function O_winner_horizontally(expected){
         {
 	  expect(winning.isWinner(expected, "O", false)).toBe("O");
 	});
-      it("Should return an if input is X ", () => 
+      it("Should return an empty string if input is X (testing O horizontally)", () => 
 	{
           expect(winning.isWinner(expected, "X", false)).toBe("");
 	});
   });
+}
+//Vetical winner testing function
+function O_winner_vertically(expected){
+    describe("Is O a winner vertically?", () => {
+       it("Should return an O (testing O vertically)", () =>
+         {
+	   expect(winning.isWinner(expected, "O", false)).toBe("O");
+         });
+       it("Should return an empty string if input is X (testing O vertically)" ,    () => 
+	 {
+          expect(winning.isWinner(expected, "X", false)).toBe("");
+	 });
+    });
 }
 //End of testing functions for O
 
