@@ -38,4 +38,11 @@ describe("Is X a winner horizontal?", () => {
   
 });
 
-
+describe("Is X a winner vertically?", () => {
+    var expected = ["X","O","X",
+                    "X", "X", "O",
+                    "X", "X", "X"];
+    it("Should return an X (testing first row vertically)", () => {
+        expect(winning.isWinner(expected, "X", false)).toBe("X");
+    });
+});
