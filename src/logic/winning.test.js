@@ -1,8 +1,10 @@
 const winning = require('./winning');
 function X_winner_horizontal(expected){
-   it("Should return an X (testing horizontal)", () => 
-   {
-     expect(winning.isWinner(expected, "X",false)).toBe("X");
+   describe("Is X a winner horizontal?", () => {
+     it("Should return an X (testing horizontal)", () => 
+       {
+         expect(winning.isWinner(expected, "X",false)).toBe("X");
+       });
    });
 }
 
