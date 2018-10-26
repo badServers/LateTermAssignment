@@ -26,4 +26,9 @@ $(document).ready(function() {
                 loadBoard();
         });
     });
+
+    resetButton.on('click', function () {
+      playAgainButton.playAgain(xScore, oScore, player, counter);
+    });
+
 });
