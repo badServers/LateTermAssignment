@@ -6,7 +6,8 @@ function X_winner_horizontal(expected){
    });
 }
 
-var testing_first_row_horizontal_X = ["X", "X", "X",
+var testing_first_row_horizontal_X = 
+	       ["X", "X", "X",
 	         "O", "O", "X",
 	         "O", "X", "O"
                ];
