@@ -38,8 +38,7 @@ function O_winner_horizontally(expected){
 	  expect(winning.isWinner(expected, "O", false)).toBe("O");
 	}
       );
-      it("Should return an empty string if input is X (testing O horizontally")
-        , () => 
+      it("Should return an if input is X - testing O horizontally"), () => 
 	{
           expected(winning.isWinner(expected, "X", false)).toBe("");
 	}
@@ -96,7 +95,20 @@ var testing_third_row_vertically_X =
 X_winner_vertically(testing_third_row_vertically_X);
 //Vertical testing for X finished
 
+//Horizontal testing for O
+var testing_first_row_horizontally_O = 
+	      ["O", "O", "O",
+	       "X", "X", "O",
+	       "O", "O", "X"
+	      ];
+var testing_second_row_horizontally_O =
+	     ["X", "O", "X",
+	      "O", "O", "O",
+	      "X", "X", "O"
+	     ];
 
+O_winner_horizontally(testing_first_row_horizontally_O);
+//Horizontal testing for O finished
 
 
 
