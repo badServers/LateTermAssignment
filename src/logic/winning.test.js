@@ -36,12 +36,11 @@ function O_winner_horizontally(expected){
       it("Should return an O (testing O horizontally)", () =>
         {
 	  expect(winning.isWinner(expected, "O", false)).toBe("O");
-	}
-      );
-      it("Should return an if input is X - testing O horizontally"), () => 
+	});
+      it("Should return an if input is X ", () => 
 	{
-          expected(winning.isWinner(expected, "X", false)).toBe("");
-	}
+          expect(winning.isWinner(expected, "X", false)).toBe("");
+	});
   });
 }
 //End of testing functions for O
@@ -52,21 +51,18 @@ var testing_first_row_horizontal_X =
 	         "O", "O", "X",
 	         "O", "X", "O"
                ];
-
-X_winner_horizontal(testing_first_row_horizontal_X);
-
 var testing_second_row_horizontal_X =
 	       ["O", "X", "O",
 	        "X", "X", "X",
 	        "O", "O", "X"
 	       ];
-X_winner_horizontal(testing_second_row_horizontal_X);
-
 var testing_third_row_horizontal_X = 
 	       ["O", "X", "X",
 	        "X", "O", "O",
 	        "X", "X", "X"
 	       ];
+X_winner_horizontal(testing_first_row_horizontal_X);
+X_winner_horizontal(testing_second_row_horizontal_X);
 X_winner_horizontal(testing_third_row_horizontal_X);
 //Horizontal testing finished for X
 
@@ -76,23 +72,20 @@ var testing_first_row_vertically_X =
 		"X", "O", "O",
 		"X", "O", "X"
 	       ];
-X_winner_vertically(testing_first_row_vertically_X);
-
 var testing_second_row_vertically_X = 
 	       ["O", "X", "O",
 	        "X", "X", "O",
 		"O", "X", "X"
 	       ]; 
-
-X_winner_vertically(testing_second_row_vertically_X);
-
 var testing_third_row_vertically_X =
 	      ["O", "X", "X",
 	       "X", "O", "X",
 	       "X", "O", "X"
 	      ];
-
+X_winner_vertically(testing_first_row_vertically_X);
+X_winner_vertically(testing_second_row_vertically_X);
 X_winner_vertically(testing_third_row_vertically_X);
+
 //Vertical testing for X finished
 
 //Horizontal testing for O
@@ -112,8 +105,8 @@ var testing_third_row_horizontally_O =
 	     "O", "O", "O"];
 
 O_winner_horizontally(testing_first_row_horizontally_O);
-O_winner_horizontally(testing_second_row_horizontally_O);
-O_winner_horizontally(testing_third_row_horizontally_O);
+//O_winner_horizontally(testing_second_row_horizontally_O);
+//O_winner_horizontally(testing_third_row_horizontally_O);
 //Horizontal testing for O finished
 
 
