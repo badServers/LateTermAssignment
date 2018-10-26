@@ -10,7 +10,6 @@ function changePlayer(player) {
 		return "O";
 	}
 	return "X";
-
 }
 
 module.exports = {
