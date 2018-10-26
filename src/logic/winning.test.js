@@ -1,5 +1,5 @@
 const winning = require('./winning');
-
+//Horizontal winner
 describe("Is X a winner horizontal?", () => {
   var expected = ["X","X","X",
                     "O","O","X",
@@ -37,7 +37,7 @@ describe("Is X a winner horizontal?", () => {
   });
   
 });
-
+//Vertically winner
 describe("Is X a winner vertically?", () => {
     var expected = ["X","O","X",
                     "X", "X", "O",
