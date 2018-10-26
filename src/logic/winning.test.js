@@ -1,6 +1,6 @@
 const winning = require('./winning');
 
-describe("Is X a Winner?", () => {
+describe("Is X a winner horizontal?", () => {
   var expected = ["X","X","X",
                     "O","O","X",
                     "O","X","O"];
@@ -9,7 +9,7 @@ describe("Is X a Winner?", () => {
     expect(winning.isWinner(expected,"X",false)).toBe("X");
   });
 
-  it("Should return an O (testing for first row horizontal)", () => {
+  it("Should return an empty string (testing for first row horizontal)", () => {
      expect(winning.isWinner(expected, "O",false)).toBe("");
   });
 
@@ -20,9 +20,10 @@ describe("Is X a Winner?", () => {
      expect(winning.isWinner(expected, "X", false)).toBe("X");
   });
   
-  it("Should return an O (testing second row horizontal", () => {
+  it("Should return an empty string (testing second row horizontal", () => {
       expect(winning.isWinner(expected, "O", false)).toBe("");
   });
+  
 });
 
 
