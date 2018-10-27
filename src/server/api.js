@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const greeting = require("../logic/greeting");
 const gameboard = require("../logic/gameboard");
 
 router.get("/", (req, res) => {
