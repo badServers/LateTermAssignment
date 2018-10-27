@@ -15,11 +15,3 @@ describe("GET /api", () => {
     expect(res.body).toHaveProperty("error");
   });
 });
-
-describe("GET /api/greeting/{NAME}", () => {
-  it("should return an object with the greeting attribute", async () => {
-    const res = await request(app).get("/api/greeting/SomeName");
-    expect(res.status).toBe(200);
-    expect(res.body).toHaveProperty("greeting");
-  });
-});
