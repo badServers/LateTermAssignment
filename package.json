@@ -36,7 +36,7 @@
   "jest": {
     "coverageReporters": [
       "text",
-      "hmtl"
+      "html"
     ]
   }
 }
