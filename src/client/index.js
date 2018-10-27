@@ -22,13 +22,16 @@ $(document).ready(function() {
     board.on('click', function() {
         var response = functions.tileClick($(this)[0].id);
         response.then(function(result) {
-            if (result.result == "Board updated")
+            if (result.result == "Board updated") {
                 loadBoard();
+            }
         });
     });
 
     resetButton.on('click', function () {
-      playAgainButton.playAgain(xScore, oScore, player, counter);
+        var boardStatus = functions.resetBoard();
+        boardStatus.then(function(result) {
+            functions.renderBoard(board, result);
+        });
     });
-
 });

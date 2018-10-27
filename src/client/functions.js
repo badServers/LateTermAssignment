@@ -15,6 +15,9 @@ function renderBoard(board, boardStatus) {
         if (boardStatus[i] == "X" || boardStatus[i] == "O") {
             $(board[i]).html('<p>' + boardStatus[i] + '</p>');
         }
+        else {
+            $(board[i]).html('<p></p>');
+        }
     }
 }
 
@@ -29,8 +32,19 @@ function tileClick(tile) {
     return response;
 }
 
+function resetBoard() {
+    var board =
+        fetch("/api/game/gameboard/resetBoard")
+            .then((resp) => resp.json())
+            .then(function(data) {
+                return data;
+            });
+    return board;
+}
+
 module.exports = {
     fetchBoard,
     renderBoard,
-    tileClick
+    tileClick,
+    resetBoard
 }
