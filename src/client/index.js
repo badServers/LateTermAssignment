@@ -1,4 +1,5 @@
 const functions = require("./functions");
+const isGameOver = require("../logic/gameboard");
 
 $(document).ready(function() {
     // DOM Objects
@@ -19,19 +20,22 @@ $(document).ready(function() {
     loadBoard();
 
     // Gameboard on click event
-    board.on('click', function() {
-        var response = functions.tileClick($(this)[0].id);
-        response.then(function(result) {
-            if (result.result == "Board updated") {
-                loadBoard();
-            }
-        });
 
+    if(!isGameOver.gameOverYet()) {
+      board.on('click', function() {
+          var response = functions.tileClick($(this)[0].id);
+          response.then(function(result) {
+              if (result.result == "Board updated") {
+                  loadBoard();
+              }
+          });
         var message = functions.fetchMessage();
         message.then(function(result) {
             functions.updateMessage(banner, result.result);
         });
-    });
+      });
+    }
+
 
     resetButton.on('click', function () {
         var boardStatus = functions.resetBoard();
