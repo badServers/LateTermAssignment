@@ -2,7 +2,7 @@ const functions = require("./functions");
 
 $(document).ready(function() {
     // DOM Objects
-    var message = $('#message-banner');
+    var banner = $('#message-banner');
     var board = $('#board-container div');
     var resetButton = $('#reset-button');
     var xScoreText = $('#x-score');
@@ -25,6 +25,11 @@ $(document).ready(function() {
             if (result.result == "Board updated") {
                 loadBoard();
             }
+        });
+
+        var message = functions.fetchMessage();
+        message.then(function(result) {
+            functions.updateMessage(banner, result.result);
         });
     });
 

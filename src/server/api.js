@@ -30,4 +30,8 @@ router.get("/game/gameboard/resetBoard", (req, res) => {
     res.status(200).send(gameboard.resetBoard());
 });
 
+router.get("/game/gameboard/updateMessage", (req, res) => {
+    res.status(200).send(gameboard.updateMessage());
+});
+
 module.exports = router;

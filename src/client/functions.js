@@ -42,9 +42,26 @@ function resetBoard() {
     return board;
 }
 
+function fetchMessage() {
+    var message =
+        fetch("/api/game/gameboard/updateMessage")
+            .then((resp) => resp.json())
+            .then(function(data) {
+                return data;
+            });
+    return message;
+}
+
+function updateMessage(banner, message) {
+    console.log(message);
+    $(banner).html(message);
+}
+
 module.exports = {
     fetchBoard,
     renderBoard,
     tileClick,
-    resetBoard
+    resetBoard,
+    fetchMessage,
+    updateMessage
 }
