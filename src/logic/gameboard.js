@@ -15,8 +15,7 @@ var board = {
     5: "-",
     6: "-",
     7: "-",
-    8: "-",
-    9: "-",
+    8: "-"
 }
 
 function boardStatus() {
@@ -33,6 +32,13 @@ function checkGameOver() {
     if (result.winner != "") {
         gameOver = true;
         winner = result.winner;
+
+        if (winner == "X") {
+            xScore++;
+        }
+        else {
+            oScore++;
+        }
     }
     else if (result.winner == "Draw") {
         gameOver = true;
@@ -91,10 +97,15 @@ function updateMessage() {
     }
 }
 
+function updateScores() {
+    return { "X": xScore, "O": oScore };
+}
+
 module.exports = {
     boardStatus,
     updateBoard,
     resetBoard,
     updateMessage,
-    gameOverYet
+    gameOverYet,
+    updateScores
 }
