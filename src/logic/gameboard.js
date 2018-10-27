@@ -37,7 +37,17 @@ function updateBoard(tile) {
     return { "result": "Board updated" };
 }
 
+function resetBoard() {
+    playerTurn = "X";
+    
+    for (var i = 0; i < 9; i++)
+        board[i] = "-";
+
+    return board;
+}
+
 module.exports = {
     boardStatus,
-    updateBoard
+    updateBoard,
+    resetBoard
 }
