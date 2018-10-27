@@ -53,8 +53,22 @@ function fetchMessage() {
 }
 
 function updateMessage(banner, message) {
-    console.log(message);
     $(banner).html(message);
+}
+
+function fetchScores() {
+    var scores =
+        fetch("/api/game/gameboard/updateScores")
+            .then((resp) => resp.json())
+            .then(function(data) {
+                return data;
+            });
+    return scores;
+}
+
+function updateScores(xScoreText, oScoreText, result) {
+    $(xScoreText).html("X: " + result.X);
+    $(oScoreText).html("O: " + result.O);
 }
 
 module.exports = {
@@ -63,5 +77,7 @@ module.exports = {
     tileClick,
     resetBoard,
     fetchMessage,
-    updateMessage
+    updateMessage,
+    fetchScores,
+    updateScores
 }
