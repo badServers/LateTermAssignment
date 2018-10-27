@@ -73,8 +73,6 @@ function resetBoard() {
     playerTurn = "X";
     gameOver = false;
     round = 0;
-    xScore = 0;
-    oScore = 0;
 
     for (var i = 0; i < 9; i++) {
         board[i] = "-";
