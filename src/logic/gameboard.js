@@ -3,6 +3,8 @@ var playerTurn = "X";
 var gameOver = false;
 var winner = "";
 var round = 0;
+var xScore = 0;
+var oScore = 0;
 
 var board = {
     0: "-",
@@ -22,25 +24,41 @@ function boardStatus() {
 }
 
 function gameOverYet() {
-  return gameOver;
+    return gameOver;
+}
+
+function checkGameOver() {
+    var result = checkForWinner.isWinner(board, playerTurn, round);
+
+    if (result.winner != "") {
+        gameOver = true;
+        winner = result.winner;
+    }
+    else if (result.winner == "Draw") {
+        gameOver = true;
+    }
 }
 
 function updateBoard(tile) {
-    if (gameOver)
+    if (gameOver) {
         return { "result": "Game is over" };
+    }
 
-    if (board[tile] != "-")
+    if (board[tile] != "-") {
         return { "result": "Tile taken" };
+    }
 
     board[tile] = playerTurn;
-    gameOver = checkForWinner.isWinner(board, playerTurn, gameOver, round);
+    round++;
+    checkGameOver();
+
     if(playerTurn === "X") {
-      playerTurn = "O";
+        playerTurn = "O";
     }
     else if (playerTurn === "O") {
-      playerTurn = "X";
+        playerTurn = "X";
     }
-    round++;
+
     return { "result": "Board updated" };
 }
 
@@ -49,9 +67,9 @@ function resetBoard() {
     gameOver = false;
     round = 0;
 
-
-    for (var i = 0; i < 9; i++)
+    for (var i = 0; i < 9; i++) {
         board[i] = "-";
+    }
 
     return board;
 }

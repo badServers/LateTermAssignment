@@ -17,10 +17,16 @@ $(document).ready(function() {
         });
     }
 
+    function updateBanner() {
+        var message = functions.fetchMessage();
+        message.then(function(result) {
+            functions.updateMessage(banner, result.result);
+        });
+    }
+
     loadBoard();
 
     // Gameboard on click event
-
     if(!isGameOver.gameOverYet()) {
       board.on('click', function() {
           var response = functions.tileClick($(this)[0].id);
@@ -29,18 +35,15 @@ $(document).ready(function() {
                   loadBoard();
               }
           });
-        var message = functions.fetchMessage();
-        message.then(function(result) {
-            functions.updateMessage(banner, result.result);
-        });
+          updateBanner();
       });
     }
-
 
     resetButton.on('click', function () {
         var boardStatus = functions.resetBoard();
         boardStatus.then(function(result) {
             functions.renderBoard(board, result);
         });
+        updateBanner();
     });
 });

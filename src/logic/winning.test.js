@@ -14,16 +14,16 @@ describe("isWinner", () => {
 				"O","X","O",
 				"O","X","O"];
 
-  it("Should return that the game is over (true)", () => {
-    expect(winning.isWinner(xWin,"X",false,5)).toBe(true);
+  it("Should return that the winner is X", () => {
+    expect(winning.isWinner(xWin,"X",5)).toEqual({ "winner": "X" });
   });
-  it("Should return that the game is over (true)", () => {
-    expect(winning.isWinner(oWin,"O",false,8)).toBe(true);
+  it("Should return that the winner is O", () => {
+    expect(winning.isWinner(oWin,"O",8)).toEqual({ "winner": "O" });
   });
-  it("Should return that the game is not over (false)", () => {
-    expect(winning.isWinner(noWin,"X",false,0)).toBe(false);
+  it("Should return that the game is not over", () => {
+    expect(winning.isWinner(noWin,"X",0)).toEqual({ "winner": "" });
   });
-  it("Should return that the game is over (true)", () => {
-    expect(winning.isWinner(noWin,"X",false,9)).toBe(true);
+  it("Should return that there was a draw", () => {
+    expect(winning.isWinner(draw,"X",9)).toEqual({ "winner": "Draw" });
   });
 });
