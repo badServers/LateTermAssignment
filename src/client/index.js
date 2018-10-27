@@ -24,6 +24,13 @@ $(document).ready(function() {
         });
     }
 
+    function updateScores() {
+        var scores = functions.fetchScores();
+        scores.then(function(result) {
+            functions.updateScores(xScoreText, oScoreText, result);
+        });
+    }
+
     loadBoard();
 
     // Gameboard on click event
@@ -45,5 +52,6 @@ $(document).ready(function() {
             functions.renderBoard(board, result);
         });
         updateBanner();
+        updateScores();
     });
 });

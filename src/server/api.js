@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const greeting = require("../logic/greeting");
 const gameboard = require("../logic/gameboard");
 
 router.get("/", (req, res) => {
@@ -32,6 +31,10 @@ router.get("/game/gameboard/resetBoard", (req, res) => {
 
 router.get("/game/gameboard/updateMessage", (req, res) => {
     res.status(200).send(gameboard.updateMessage());
+});
+
+router.get("/game/gameboard/updateScores", (req, res) => {
+    res.status(200).send(gameboard.updateScores());
 });
 
 module.exports = router;
