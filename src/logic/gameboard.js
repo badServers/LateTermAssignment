@@ -1,7 +1,9 @@
 const checkForWinner = require("./winning")
 var playerTurn = "X";
 var gameOver = false;
+var winner = "";
 var round = 0;
+
 var board = {
     0: "-",
     1: "-",
@@ -47,15 +49,34 @@ function resetBoard() {
     gameOver = false;
     round = 0;
 
+
     for (var i = 0; i < 9; i++)
         board[i] = "-";
 
     return board;
 }
 
+function updateMessage() {
+    if (gameOver) {
+        if (winner == "X") {
+            return { "result": "Winner is X!" };
+        }
+        else if (winner == "O") {
+            return { "result": "Winner is O!" };
+        }
+        else {
+            return { "result": "Draw!" };
+        }
+    }
+    else {
+        return { "result": playerTurn + ", it's your turn!" };
+    }
+}
+
 module.exports = {
     boardStatus,
     updateBoard,
     resetBoard,
+    updateMessage,
     gameOverYet
 }

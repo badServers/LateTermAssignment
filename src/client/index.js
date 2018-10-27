@@ -3,7 +3,7 @@ const isGameOver = require("../logic/gameboard");
 
 $(document).ready(function() {
     // DOM Objects
-    var message = $('#message-banner');
+    var banner = $('#message-banner');
     var board = $('#board-container div');
     var resetButton = $('#reset-button');
     var xScoreText = $('#x-score');
@@ -20,6 +20,7 @@ $(document).ready(function() {
     loadBoard();
 
     // Gameboard on click event
+
     if(!isGameOver.gameOverYet()) {
       board.on('click', function() {
           var response = functions.tileClick($(this)[0].id);
@@ -28,8 +29,13 @@ $(document).ready(function() {
                   loadBoard();
               }
           });
+        var message = functions.fetchMessage();
+        message.then(function(result) {
+            functions.updateMessage(banner, result.result);
+        });
       });
     }
+
 
     resetButton.on('click', function () {
         var boardStatus = functions.resetBoard();
