@@ -8,7 +8,7 @@
     "start": "node server",
     "test": "jest",
     "watch": "jest --watchAll",
-    "build": "webpack",
+    "build": "webpack && jest --coverage --coverageDirectory=output/coverage/jest",
     "build-devserver": "webpack-dev-server --open",
     "jest-coverage": "jest --coverage --coverageDirectory=output/coverage/jest"
     
