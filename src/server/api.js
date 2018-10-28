@@ -22,4 +22,8 @@ router.get("/game/gameboard/updateScores", (req, res) => {
     res.status(200).send(gameboard.updateScores());
 });
 
+router.get("/game/gameboard/gameOverYet", (req, res) => {
+    res.status(200).send(gameboard.gameOverYet());
+});
+
 module.exports = router;
