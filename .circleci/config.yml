@@ -35,3 +35,23 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+
+      # dist!
+      - run: yarn dist
+
+      # store dist
+      - store_artifacts:
+          path: dist
+
+      # store dist
+      - store_artifacts:
+          path: artifacts/coverage
+
+      # store dist
+      - store_artifacts:
+          path: artifacts/test-results
+
+     # store test results
+      - store_test_results:
+          path: artifacts/test-results
