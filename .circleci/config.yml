@@ -32,10 +32,10 @@ jobs:
       - store_artifacts:
           path: /home/circleci/dist/dist/administrationManual.pdf
         
-        - store_artifacts:
+      - store_artifacts:
           path: /home/circleci/dist/dist/designReport.pdf
         
-        - store_artifacts:
+      - store_artifacts:
           path: /home/circleci/dist/dist/developmentManual.pdf
           
 
