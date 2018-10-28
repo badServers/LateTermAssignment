@@ -30,7 +30,13 @@ jobs:
       - run: npm run build
     
       - store_artifacts:
-          path: /home/circleci/dist/dist
+          path: /home/circleci/dist/dist/administrationManual.pdf
+        
+        - store_artifacts:
+          path: /home/circleci/dist/dist/designReport.pdf
+        
+        - store_artifacts:
+          path: /home/circleci/dist/dist/developmentManual.pdf
           
 
              
