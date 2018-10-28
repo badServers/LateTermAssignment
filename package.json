@@ -8,7 +8,7 @@
     "start": "node server",
     "test": "jest",
     "watch": "jest --watchAll",
-    "build": "webpack && mdpdf docs/designReport.md dist/designReport.pdf && mdpdf docs/administrationManual.md dist/administrationManual.pdf && mdpdf docs/developmentManual.md dist/developmentManual.pdf",
+    "build": "webpack && jest --coverage --coverageDirectory=output/coverage/jest && mdpdf docs/designReport.md dist/designReport.pdf && mdpdf docs/administrationManual.md dist/administrationManual.pdf && mdpdf docs/developmentManual.md dist/developmentManual.pdf",
     "build-devserver": "webpack-dev-server --open",
     "jest-coverage": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
@@ -36,7 +36,7 @@
   "jest": {
     "coverageReporters": [
       "text",
-      "hmtl"
+      "html"
     ]
   }
 }
