@@ -28,3 +28,10 @@ describe("GET /api/game/gameboard/updateMessage", () => {
         expect(res.status).toBe(200);
     });
 });
+
+describe("GET /api/game/gameboard/gameOverYet", () => {
+    it("Should return a 200 status code", async () => {
+        const res = await request(app).get("/api/game/gameboard/gameOverYet");
+        expect(res.status).toBe(200);
+    });
+});
