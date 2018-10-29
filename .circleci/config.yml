@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node
+    parellelism: 4
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -163,6 +164,7 @@ jobs:
 
 workflows:
   version: 2
+  parallelism: 4
   build-deploy:
     jobs:
       - build
