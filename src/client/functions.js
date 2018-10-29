@@ -71,6 +71,23 @@ function updateScores(xScoreText, oScoreText, result) {
     $(oScoreText).html("O: " + result.O);
 }
 
+function gameOverYet() {
+    var response =
+        fetch("/api/game/gameboard/gameOverYet")
+            .then((resp) => resp.json())
+            .then(function(data) {
+                return data;
+            });
+    var gameOver = response.then(function(result) {
+        return result.result;
+    });
+
+    if (gameOver == "true") {
+        return true;
+    }
+    return false;
+}
+
 module.exports = {
     fetchBoard,
     renderBoard,
@@ -79,5 +96,6 @@ module.exports = {
     fetchMessage,
     updateMessage,
     fetchScores,
-    updateScores
+    updateScores,
+    gameOverYet
 }

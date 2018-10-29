@@ -23,7 +23,7 @@ function boardStatus() {
 }
 
 function gameOverYet() {
-    return gameOver;
+    return { "result": gameOver };
 }
 
 function checkGameOver() {

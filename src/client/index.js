@@ -1,5 +1,4 @@
 const functions = require("./functions");
-const isGameOver = require("../logic/gameboard");
 
 $(document).ready(function() {
     // DOM Objects
@@ -34,7 +33,7 @@ $(document).ready(function() {
     loadBoard();
 
     // Gameboard on click event
-    if(!isGameOver.gameOverYet()) {
+    if(!functions.gameOverYet()) {
       board.on('click', function() {
           var response = functions.tileClick($(this)[0].id);
           response.then(function(result) {

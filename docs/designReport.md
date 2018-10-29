@@ -5,8 +5,9 @@ Tic Tac Toe is a web game, just like the original the rules are that each player
 ## Features
 * User can play the game with a friend or by himself.
 * Message appears above the board that tells the user/s who's turn it is (X or O).
-* Games stops if board is full or X or O marks are in a row, either horizontally, vertically or diagonally.
-* Play again button clears board so user/s can play again.
+* A win can accure when three of the same marks are in a row, either horizontally, vertically or diagonally.
+* A message appears at the end of the game to tell the user/s who has won or if a draw has accured.
+* Play again button clears the board so user/s can play again and gives user point if he won.
 
 ## Coding standards
 
