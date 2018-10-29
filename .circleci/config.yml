@@ -174,13 +174,13 @@ workflows:
               only: master
       - run_puppyteer:
           requires:
-            - build
+            - -deploy_to_staging
           filters:
             branches:
               only: master
       - deploy_to_production:
           requires:
-            - build
+            - run_puppyteer
           filters:
             branches:
               only: master      
