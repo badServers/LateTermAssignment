@@ -1,7 +1,7 @@
 # Late-term Assignment 
 SC-T-303-HUGB, fall semester 2018.
 
-## Purpose
+## Purpoe
 
 Learn to set up technical infrastructure to support agile development. The main challenge is to glue
 together the bits and pieces through the latter half of this class, into a coherent infrastructure.
