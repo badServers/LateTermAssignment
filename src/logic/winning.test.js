@@ -9,7 +9,7 @@ function X_winner_horizontal(expected){
        });
      it("Should return an empty string if inserted O", () =>
        {
-         expect(winning.isWinner(expected, "O", 0)).toEqual( { "winner": "X"} );
+         expect(winning.isWinner(expected, "O", 0)).toEqual( { "winner": ""} );
        });
    });
 }
