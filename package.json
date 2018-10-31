@@ -6,19 +6,24 @@
   "scripts": {
     "dev": "nodemon",
     "start": "node server",
+    "puppyteer": "node ./end-to-end-test.js",
     "test": "jest",
     "watch": "jest --watchAll",
     "build": "webpack && jest --coverage --coverageDirectory=dist/coverage/jest && mdpdf docs/designReport.md dist/designReport.pdf && mdpdf docs/administrationManual.md dist/administrationManual.pdf && mdpdf docs/developmentManual.md dist/developmentManual.pdf",
     "build-devserver": "webpack-dev-server --open",
-    "jest-coverage": "jest --coverage --coverageDirectory=dist/coverage/jest"
+    "jest-coverage": "jest --coverage --coverageDirectory=dist/coverage/jest",
+    "deploy-production": "heroku pipelines:promote -a arcane-fjord-71017",
+    "deploy-staging": "heroku git:remote -a arcane-fjord-71017"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "heroku": "^7.18.3",
     "lodash": "^4.17.11",
-    "mdpdf": "^1.7.2"
+    "mdpdf": "^1.7.2",
+    "puppeteer": "^1.9.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
